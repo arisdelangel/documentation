@@ -3,8 +3,8 @@ import usePage from './use-page'
 
 const useLocationChange = () => {
   const {pathname} = usePage().location
-  const pathRef = React.useRef(null)
-  const [pathChange, setPathChange] = React.useState({change: false})
+  const pathRef = React.useRef(true)
+  const [pathChange, setPathChange] = React.useState({change: true})
 
   React.useEffect(() => {
     if (pathRef.current && pathRef.current !== pathname) {
